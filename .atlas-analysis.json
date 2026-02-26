@@ -1,0 +1,53 @@
+{
+  "projectType": "general",
+  "projectName": "Awesome OpenCode",
+  "projectDescription": "A curated directory of plugins, themes, agents, projects, and resources for OpenCode—the AI coding agent for the terminal.",
+  "theme": "palm",
+  "primaryColor": "#5B47FF",
+  "lightColor": "#8B7FFF",
+  "darkColor": "#3D2FCC",
+  "navigation": {
+    "groups": [
+      {
+        "group": "Get Started",
+        "pages": [
+          "introduction",
+          "browsing-guide",
+          "about"
+        ]
+      },
+      {
+        "group": "Browse",
+        "pages": [
+          "browse/plugins",
+          "browse/themes",
+          "browse/agents",
+          "browse/projects",
+          "browse/resources"
+        ]
+      },
+      {
+        "group": "Contribute",
+        "pages": [
+          "contribute/guidelines",
+          "contribute/submitting",
+          "contribute/schema-reference"
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "70+ curated OpenCode plugins for memory, agents, authentication, and more",
+    "Comprehensive collection of themes, agents, and developer tools",
+    "Community-driven directory with YAML-based contribution system",
+    "Validated entries with structured metadata and installation guides",
+    "Browse by category: plugins, themes, agents, projects, and resources"
+  ],
+  "publicApiSurface": [
+    "YAML data schema for plugin/theme/agent entries",
+    "Category-based browsing (plugins, themes, agents, projects, resources)",
+    "Contribution workflow via YAML files",
+    "JSON registry export at dist/registry.json",
+    "Validation scripts for entry quality assurance"
+  ]
+}
