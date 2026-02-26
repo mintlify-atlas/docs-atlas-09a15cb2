@@ -1,0 +1,291 @@
+---
+title: About Awesome OpenCode
+description: Learn about the project mission, community-driven curation process, and how you can contribute to the ecosystem
+---
+
+## Mission
+
+Awesome OpenCode exists to **empower the OpenCode community** by maintaining a comprehensive, curated directory of plugins, themes, agents, projects, and resources.
+
+<Card title="Our Goal" icon="bullseye">
+  Make it easy for developers to discover, evaluate, and leverage the incredible tools and extensions being built around OpenCode — the AI coding agent for the terminal.
+</Card>
+
+### Why This Matters
+
+OpenCode represents a new paradigm in software development: AI agents that work alongside developers in their natural environment — the terminal. As this ecosystem grows, so does the challenge of discovering high-quality extensions and tools.
+
+Awesome OpenCode solves this by:
+
+<CardGroup cols={2}>
+  <Card title="Centralizing Discovery" icon="compass">
+    One place to find all OpenCode-related projects instead of scattered across GitHub
+  </Card>
+  <Card title="Ensuring Quality" icon="shield-check">
+    Community vetting and active maintenance requirements keep the list relevant
+  </Card>
+  <Card title="Reducing Duplication" icon="copy">
+    See what's already been built before reinventing the wheel
+  </Card>
+  <Card title="Inspiring Innovation" icon="lightbulb">
+    Discover what's possible and build on existing ideas
+  </Card>
+</CardGroup>
+
+## Community-Driven Curation
+
+This is **not** an official Anomaly project — it's **built by the community, for the community**.
+
+### How Curation Works
+
+<Steps>
+  <Step title="Community Submissions">
+    Developers submit their projects via **YAML files** in a Pull Request. No need to edit the README directly — the system auto-generates the list from structured data.
+  </Step>
+  
+  <Step title="Automated Validation">
+    GitHub Actions automatically:
+    - Verify YAML syntax
+    - Check required fields
+    - Validate repository URLs
+    - Ensure uniqueness
+  </Step>
+  
+  <Step title="Maintainer Review">
+    Community maintainers verify:
+    - **Relevance** - Directly related to OpenCode
+    - **Quality** - Clear documentation and setup instructions
+    - **Activity** - Recent commits (within 6 months)
+    - **Uniqueness** - Not a duplicate of existing entries
+  </Step>
+  
+  <Step title="Automatic README Generation">
+    Once merged, the README.md regenerates automatically, keeping everything in sync and beautifully formatted.
+  </Step>
+</Steps>
+
+<Note>
+This YAML-based approach ensures consistency, makes contributions easier, and allows for future enhancements like search, filtering, and API access.
+</Note>
+
+## Contributing
+
+We **actively encourage contributions** from the OpenCode community. Whether you've built a plugin, discovered a useful resource, or created a new tool, we want to feature it!
+
+### What Can You Contribute?
+
+<AccordionGroup>
+  <Accordion title="Plugins" icon="puzzle-piece">
+    OpenCode extensions that add new functionality:
+    - Tools and commands
+    - Memory systems
+    - Authentication providers
+    - Workflow enhancements
+    - Development utilities
+  </Accordion>
+  
+  <Accordion title="Themes" icon="palette">
+    Visual customizations:
+    - Color schemes
+    - Terminal styling
+    - UI modifications
+  </Accordion>
+  
+  <Accordion title="Agents" icon="robot">
+    AI agent configurations and systems:
+    - Specialized agents
+    - Subagent orchestration
+    - Workflow patterns
+    - Agent frameworks
+  </Accordion>
+  
+  <Accordion title="Projects" icon="hammer">
+    Standalone tools and integrations:
+    - GUIs and TUIs
+    - API proxies
+    - Session managers
+    - IDE integrations
+    - Voice interfaces
+    - Orchestration platforms
+  </Accordion>
+  
+  <Accordion title="Resources" icon="book">
+    Learning materials and configurations:
+    - Setup guides
+    - Configuration templates
+    - Troubleshooting documentation
+    - Best practices
+    - Video tutorials
+  </Accordion>
+</AccordionGroup>
+
+### How to Submit
+
+<Steps>
+  <Step title="Fork the Repository">
+    ```bash
+    git clone https://github.com/awesome-opencode/awesome-opencode.git
+    cd awesome-opencode
+    ```
+  </Step>
+  
+  <Step title="Create a YAML File">
+    Add your entry to the appropriate category folder:
+    
+    ```yaml
+    # data/plugins/my-awesome-plugin.yaml
+    name: My Awesome Plugin
+    repo: https://github.com/username/my-awesome-plugin
+    tagline: Short punchy summary (max 120 chars)
+    description: Longer description explaining what it does and why it's useful.
+    ```
+    
+    **Category folders:**
+    - `data/plugins/` - Plugins and extensions
+    - `data/themes/` - Visual themes
+    - `data/agents/` - AI agents and configs
+    - `data/projects/` - Tools and integrations
+    - `data/resources/` - Guides and templates
+  </Step>
+  
+  <Step title="Submit Pull Request">
+    ```bash
+    git checkout -b add-my-awesome-plugin
+    git add data/plugins/my-awesome-plugin.yaml
+    git commit -m "docs: add my-awesome-plugin to plugins"
+    git push origin add-my-awesome-plugin
+    ```
+    
+    Then open a Pull Request on GitHub.
+  </Step>
+</Steps>
+
+### Contribution Requirements
+
+To maintain quality, submissions must meet these criteria:
+
+<Check>
+- **Relevant** - Directly related to OpenCode
+</Check>
+<Check>
+- **Public** - Repository is publicly accessible on GitHub or similar
+</Check>
+<Check>
+- **Maintained** - Active commits within the last 6 months (or clearly documented as stable/complete)
+</Check>
+<Check>
+- **Unique** - Not a duplicate of an existing entry
+</Check>
+<Check>
+- **Complete** - All required YAML fields included (name, repo, tagline, description)
+</Check>
+
+<Tip>
+**First time contributing?** Check out existing YAML files in the `data/` folders to see examples of well-formatted entries.
+</Tip>
+
+## Maintenance Philosophy
+
+Awesome OpenCode follows these principles:
+
+### 1. Quality Over Quantity
+
+We prefer **curated excellence** over exhaustive completeness. Every entry is reviewed to ensure it provides real value to the community.
+
+### 2. Community First
+
+Decisions about what to include are made **transparently** through GitHub discussions and PRs. Maintainers facilitate, but the community decides.
+
+### 3. Low Friction
+
+The YAML-based contribution system means:
+- No complex PR diffs to review
+- Consistent formatting automatically
+- Easy to add, update, or remove entries
+- Future-proof for search and filtering features
+
+### 4. Active Curation
+
+Maintainers periodically:
+- Verify links still work
+- Check repositories are still active
+- Remove abandoned projects
+- Update descriptions as projects evolve
+
+<Warning>
+**Inactive projects** (no commits for 12+ months, broken links, archived repos) may be moved to an "Archive" section or removed to keep the list current and useful.
+</Warning>
+
+## The Team
+
+Awesome OpenCode is maintained by **volunteer community members** who believe in the potential of AI-assisted development.
+
+<Card title="Want to Help Maintain?" icon="hand">
+  Active contributors who demonstrate good judgment and engagement with the community may be invited to join the maintainer team. Reach out via GitHub Discussions if you're interested!
+</Card>
+
+## Recognition
+
+<CardGroup cols={2}>
+  <Card title="Awesome Badge" icon="award">
+    Awesome OpenCode is part of the [Awesome List](https://github.com/sindresorhus/awesome) ecosystem — a quality seal recognized across GitHub.
+  </Card>
+  
+  <Card title="Built With OpenCode" icon="code">
+    Many of the tools listed here were built *using* OpenCode itself — a testament to the agent's capabilities.
+  </Card>
+</CardGroup>
+
+## Related Communities
+
+<CardGroup cols={2}>
+  <Card title="OpenCode Discord" icon="discord" href="https://discord.gg/opencode">
+    Official community for OpenCode users and plugin developers
+  </Card>
+  
+  <Card title="OpenCode GitHub" icon="github" href="https://github.com/anomalyco/opencode">
+    Main repository for the OpenCode CLI agent
+  </Card>
+  
+  <Card title="Anomaly" icon="globe" href="https://github.com/anomalyco">
+    The team behind OpenCode and related AI developer tools
+  </Card>
+  
+  <Card title="Awesome Lists" icon="star" href="https://github.com/sindresorhus/awesome">
+    Curated lists about all kinds of interesting topics
+  </Card>
+</CardGroup>
+
+## License
+
+<Note>
+Awesome OpenCode is released under **[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)** — a public domain dedication.
+
+This means:
+- No copyright restrictions
+- Free to use for any purpose
+- No attribution required (though appreciated!)
+- True community ownership
+</Note>
+
+Individual projects listed have their own licenses — always check the repository before using.
+
+## Get Involved
+
+<CardGroup cols={3}>
+  <Card title="Submit Your Project" icon="plus" href="https://github.com/awesome-opencode/awesome-opencode/blob/main/contributing.md">
+    Add your plugin, theme, agent, or tool to the directory
+  </Card>
+  
+  <Card title="Report Issues" icon="flag" href="https://github.com/awesome-opencode/awesome-opencode/issues">
+    Found a broken link? Project no longer maintained? Let us know
+  </Card>
+  
+  <Card title="Join Discussions" icon="comments" href="https://github.com/awesome-opencode/awesome-opencode/discussions">
+    Suggest improvements, ask questions, share ideas
+  </Card>
+</CardGroup>
+
+---
+
+**Thank you for being part of the Awesome OpenCode community!** Together, we're building the future of AI-assisted development.

@@ -1,0 +1,537 @@
+---
+title: Browse Plugins
+description: Explore the complete collection of OpenCode plugins to enhance your AI coding workflow
+---
+
+# Browse Plugins
+
+Discover plugins to extend OpenCode with new capabilities, from memory systems and authentication to workflow automation and notifications.
+
+## Featured Plugins
+
+<CardGroup cols={2}>
+  <Card title="Oh My Opencode" icon="wand-magic-sparkles" href="https://github.com/code-yeongyu/oh-my-opencode">
+    Background agents, pre-built tools (LSP/AST/MCP), curated agents, and a Claude Code compatible layer.
+  </Card>
+  <Card title="Opencode Workspace" icon="layer-group" href="https://github.com/kdcokenny/opencode-workspace">
+    Bundled multi-agent orchestration harness with 16 components in one install.
+  </Card>
+  <Card title="Micode" icon="diagram-project" href="https://github.com/vtemian/micode">
+    Structured workflow with session continuity, subagent orchestration, git worktree isolation, and AST-aware tools.
+  </Card>
+  <Card title="Opencode Mem" icon="brain" href="https://github.com/tickernelz/opencode-mem">
+    A persistent memory system with local vector database technology for long-term context retention.
+  </Card>
+</CardGroup>
+
+## Memory & Context Management
+
+<AccordionGroup>
+  <Accordion title="Opencode Mem" icon="brain">
+    **Persistent memory with vector database**
+    
+    A persistent memory system for AI coding agents that enables long-term context retention across sessions using local vector database technology. Features dual memory scopes, web interface, auto-capture system, and multi-provider AI support.
+    
+    [View Repository](https://github.com/tickernelz/opencode-mem)
+  </Accordion>
+
+  <Accordion title="Agent Memory" icon="memory">
+    **Letta-inspired memory**
+    
+    Gives the agent persistent, self-editable memory blocks inspired by Letta agents.
+    
+    [View Repository](https://github.com/joshuadavidthomas/opencode-agent-memory)
+  </Accordion>
+
+  <Accordion title="Simple Memory" icon="git">
+    **Git-based memory**
+    
+    Simple plugin to manage memory inside a git repo that can be committed and reviewed by team members.
+    
+    [View Repository](https://github.com/cnicolov/opencode-plugin-simple-memory)
+  </Accordion>
+
+  <Accordion title="Context Analysis" icon="chart-line">
+    **Token usage analysis**
+    
+    An opencode plugin that provides detailed token usage analysis for your AI sessions.
+    
+    [View Repository](https://github.com/IgorWarzocha/Opencode-Context-Analysis-Plugin)
+  </Accordion>
+
+  <Accordion title="Dynamic Context Pruning" icon="scissors">
+    **Optimize token usage**
+    
+    Plugin that optimises token usage by pruning obsolete tool outputs from conversation context.
+    
+    [View Repository](https://github.com/Tarquinen/opencode-dynamic-context-pruning)
+  </Accordion>
+
+  <Accordion title="Tokenscope" icon="coins">
+    **Token analysis & cost tracking**
+    
+    Comprehensive token usage analysis and cost tracking for opencode sessions.
+    
+    [View Repository](https://github.com/ramtinJ95/opencode-tokenscope)
+  </Accordion>
+
+  <Accordion title="Opencode Quota" icon="gauge">
+    **Quota toasts and token tracking**
+    
+    Track quota and token usage across providers via automatic toasts and slash commands.
+    
+    [View Repository](https://github.com/slkiser/opencode-quota)
+  </Accordion>
+
+  <Accordion title="opencode-mystatus" icon="chart-pie">
+    **Check AI subscription quotas**
+    
+    Check all your AI subscription quotas in one command. Supports OpenAI (Plus/Pro/Codex, etc.), Zhipu AI, Google Antigravity, and more.
+    
+    [View Repository](https://github.com/vbgate/opencode-mystatus)
+  </Accordion>
+</AccordionGroup>
+
+## Multi-Agent Orchestration
+
+<AccordionGroup>
+  <Accordion title="Oh My Opencode" icon="wand-magic-sparkles">
+    **Agents & Pre-built tools**
+    
+    Background agents, pre-built tools (LSP/AST/MCP), curated agents, and a Claude Code compatible layer.
+    
+    [View Repository](https://github.com/code-yeongyu/oh-my-opencode)
+  </Accordion>
+
+  <Accordion title="Oh My Opencode Slim" icon="feather">
+    **Lightweight agent orchestration with reduced token usage**
+    
+    Slimmed-down fork of oh-my-opencode focused on core agent orchestration. Features specialized sub-agents (Explorer, Oracle, Librarian, Designer, etc.), background task management, LSP/AST tools, tmux integration for live agent visibility, and MCP servers. Optimized to consume significantly fewer tokens.
+    
+    [View Repository](https://github.com/alvinunreal/oh-my-opencode-slim) | [Homepage](https://ohmyopencodeslim.com)
+  </Accordion>
+
+  <Accordion title="Opencode Workspace" icon="layer-group">
+    **Multi-agent orchestration**
+    
+    Bundled multi-agent orchestration harness with 16 components in one install.
+    
+    [View Repository](https://github.com/kdcokenny/opencode-workspace)
+  </Accordion>
+
+  <Accordion title="Background Agents" icon="tower-broadcast">
+    **Async agent delegation**
+    
+    Claude Code-style background agents with async delegation and context persistence.
+    
+    [View Repository](https://github.com/kdcokenny/opencode-background-agents)
+  </Accordion>
+
+  <Accordion title="Background" icon="gear">
+    **Background process management**
+    
+    Background process management plugin for opencode.
+    
+    [View Repository](https://github.com/zenobi-us/opencode-background)
+  </Accordion>
+
+  <Accordion title="Swarm Plugin" icon="network-wired">
+    **Swarm intelligence**
+    
+    Swarm plugin for opencode enabling swarm-based agent coordination.
+    
+    [View Repository](https://github.com/joelhooks/opencode-swarm-plugin)
+  </Accordion>
+
+  <Accordion title="Pocket Universe" icon="circle-nodes">
+    **A subagent driven pocket universe for your primary agent**
+    
+    Async agents can be powerful, but orchestration is at best finicky; they fire and forget, orphan work, lose context, waste time... and tokens. This plugin extends the native opencode subagent paradigm to provide closed loop, resilient, async agents, blocking main thread execution. A "pocket universe". This ships with three tools creating a robust system for parallel subagents to communicate and coordinate work.
+    
+    [View Repository](https://github.com/spoons-and-mirrors/pocket-universe)
+  </Accordion>
+
+  <Accordion title="Subtask2" icon="list-check">
+    **Orchestration system**
+    
+    Extend opencode /commands into a powerful orchestration system with granular flow control.
+    
+    [View Repository](https://github.com/spoons-and-mirrors/subtask2)
+  </Accordion>
+</AccordionGroup>
+
+## Workflow & Planning
+
+<AccordionGroup>
+  <Accordion title="Micode" icon="diagram-project">
+    **Brainstorm-Plan-Implement workflow**
+    
+    Structured workflow with session continuity, subagent orchestration, git worktree isolation, and AST-aware tools.
+    
+    [View Repository](https://github.com/vtemian/micode)
+  </Accordion>
+
+  <Accordion title="Opencode Roadmap" icon="map">
+    **Strategic planning**
+    
+    Strategic roadmap planning and multi-agent coordination plugin. Provides project-wide planning capabilities.
+    
+    [View Repository](https://github.com/IgorWarzocha/Opencode-Roadmap)
+  </Accordion>
+
+  <Accordion title="Plannotator" icon="pen-to-square">
+    **Interactive plan review UI**
+    
+    Plan review UI with visual annotation, private/offline sharing, and Obsidian/Bear integration.
+    
+    [View Repository](https://github.com/backnotprop/plannotator)
+  </Accordion>
+
+  <Accordion title="OpenSpec" icon="file-lines">
+    **Add Architecture planning and specification agent for OpenSpec**
+    
+    An OpenCode plugin that integrates OpenSpec, providing a dedicated agent for planning and specifying software architecture.
+    
+    [View Repository](https://github.com/Octane0411/opencode-plugin-openspec)
+  </Accordion>
+
+  <Accordion title="Beads Plugin" icon="circle-dot">
+    **Beads issue tracker integration**
+    
+    Integration for Steve Yegge's beads issue tracker with /bd-* commands.
+    
+    [View Repository](https://github.com/joshuadavidthomas/opencode-beads)
+  </Accordion>
+</AccordionGroup>
+
+## Session & Workspace Management
+
+<AccordionGroup>
+  <Accordion title="Opencode Sessions" icon="clock-rotate-left">
+    **Session management**
+    
+    Session management plugin for OpenCode with multi-agent collaboration support.
+    
+    [View Repository](https://github.com/malhashemi/opencode-sessions)
+  </Accordion>
+
+  <Accordion title="Opencode Worktree" icon="code-branch">
+    **Zero-friction git worktrees**
+    
+    Zero-friction git worktrees for OpenCode. Auto-spawns terminals, syncs files, cleans up on exit.
+    
+    [View Repository](https://github.com/kdcokenny/opencode-worktree)
+  </Accordion>
+
+  <Accordion title="Handoff" icon="hand">
+    **Session handoff prompts**
+    
+    Creates focused handoff prompts for continuing work in a new session.
+    
+    [View Repository](https://github.com/joshuadavidthomas/opencode-handoff)
+  </Accordion>
+
+  <Accordion title="Smart Title" icon="heading">
+    **Auto-generate session titles**
+    
+    Auto-generates meaningful session titles using AI.
+    
+    [View Repository](https://github.com/Tarquinen/opencode-smart-title)
+  </Accordion>
+
+  <Accordion title="Zellij Namer" icon="terminal">
+    **Auto-rename Zellij sessions**
+    
+    Keeps your Zellij session name in sync with your work.
+    
+    [View Repository](https://github.com/24601/opencode-zellij-namer)
+  </Accordion>
+</AccordionGroup>
+
+## Skills & Capabilities
+
+<AccordionGroup>
+  <Accordion title="Opencode Skills" icon="star">
+    **Manage skills and capabilities**
+    
+    Plugin for managing and organising opencode skills and capabilities.
+    
+    [View Repository](https://github.com/malhashemi/opencode-skills)
+  </Accordion>
+
+  <Accordion title="Agent Skills (JDT)" icon="folder-tree">
+    **Dynamic skills loader**
+    
+    Dynamic skills loader that discovers skills from project, user, and plugin directories.
+    
+    [View Repository](https://github.com/joshuadavidthomas/opencode-agent-skills)
+  </Accordion>
+
+  <Accordion title="Openskills" icon="graduation-cap">
+    **Alternative skills manager**
+    
+    Alternative skills management plugin for opencode with enhanced features.
+    
+    [View Repository](https://github.com/numman-ali/openskills)
+  </Accordion>
+
+  <Accordion title="Froggy" icon="frog">
+    **Hooks and specialized agents**
+    
+    Plugin providing Claude Code-style hooks, specialized agents, and tools like gitingest.
+    
+    [View Repository](https://github.com/smartfrog/opencode-froggy)
+  </Accordion>
+</AccordionGroup>
+
+## Authentication & Model Access
+
+<AccordionGroup>
+  <Accordion title="Antigravity Auth" icon="key">
+    **Google Antigravity models**
+    
+    Use Gemini and Anthropic models for free via Google Antigravity IDE authentication.
+    
+    [View Repository](https://github.com/NoeFabris/opencode-antigravity-auth)
+  </Accordion>
+
+  <Accordion title="Antigravity Multi-Auth" icon="keys">
+    **Multiple Google accounts**
+    
+    Fork of opencode-antigravity-auth that allows using multiple Google accounts with automatic rotation when rate limited.
+    
+    [View Repository](https://github.com/theblazehen/opencode-antigravity-multi-auth)
+  </Accordion>
+
+  <Accordion title="Gemini Auth" icon="google">
+    **Google account auth**
+    
+    Authenticate the Opencode CLI with your Google account so you can use your existing Gemini plan.
+    
+    [View Repository](https://github.com/jenslys/opencode-gemini-auth)
+  </Accordion>
+
+  <Accordion title="OpenAI Codex Auth" icon="openai">
+    **ChatGPT Plus/Pro OAuth**
+    
+    This plugin enables opencode to use OpenAI's Codex backend via ChatGPT Plus/Pro OAuth authentication.
+    
+    [View Repository](https://github.com/numman-ali/opencode-openai-codex-auth)
+  </Accordion>
+
+  <Accordion title="OpenHax Codex" icon="shield">
+    **OAuth authentication**
+    
+    OAuth authentication plugin for personal coding assistance with ChatGPT Plus/Pro subscriptions.
+    
+    [View Repository](https://github.com/open-hax/codex)
+  </Accordion>
+</AccordionGroup>
+
+## Notifications & Alerts
+
+<AccordionGroup>
+  <Accordion title="Opencode Notify" icon="bell">
+    **Native OS notifications**
+    
+    Native OS notifications for OpenCode - know when tasks complete.
+    
+    [View Repository](https://github.com/kdcokenny/opencode-notify)
+  </Accordion>
+
+  <Accordion title="Smart Voice Notify" icon="volume-high">
+    **Intelligent voice notifications**
+    
+    Smart voice notification plugin with multiple TTS engines (ElevenLabs, Edge TTS, SAPI) and intelligent reminder system.
+    
+    [View Repository](https://github.com/MasuRii/opencode-smart-voice-notify)
+  </Accordion>
+
+  <Accordion title="Warcraft Notifications" icon="gamepad">
+    **Fun sound notifications**
+    
+    Notification plugin with Warcraft sounds for opencode completion alerts.
+    
+    [View Repository](https://github.com/pantheon-org/opencode-warcraft-notifications)
+  </Accordion>
+
+  <Accordion title="Ring a Bell Example" icon="bell-concierge">
+    **Simple terminal bell plugin**
+    
+    A simple plugin to ring the terminal bell once a request is complete.
+    
+    [View Gist](https://gist.github.com/ahosker/267f375a65378bcb9a867fd9a195db1e)
+  </Accordion>
+</AccordionGroup>
+
+## Development Tools & Integrations
+
+<AccordionGroup>
+  <Accordion title="Devcontainers" icon="docker">
+    **Multi-branch devcontainers**
+    
+    Plugin for running multiple devcontainer instances with auto-assigned ports and branch-based isolation.
+    
+    [View Repository](https://github.com/athal7/opencode-devcontainers)
+  </Accordion>
+
+  <Accordion title="Direnv" icon="folder-open">
+    **Load direnv variables**
+    
+    Automatically loads direnv environment variables at session start. Perfect for Nix flakes.
+    
+    [View Repository](https://github.com/simonwjackson/opencode-direnv)
+  </Accordion>
+
+  <Accordion title="Opencode Canvas" icon="canvas">
+    **Interactive terminal canvases in tmux splits**
+    
+    Interactive terminal canvases (calendars, documents, flight booking) in tmux splits. Port of claude-canvas for OpenCode.
+    
+    [View Repository](https://github.com/mailshieldai/opencode-canvas)
+  </Accordion>
+
+  <Accordion title="Morph Fast Apply" icon="bolt">
+    **10,500+ tokens/sec code editing**
+    
+    Integrates Morph's Fast Apply API for faster code editing with lazy edit markers and unified diff output.
+    
+    [View Repository](https://github.com/JRedeker/opencode-morph-fast-apply)
+  </Accordion>
+
+  <Accordion title="WakaTime" icon="clock">
+    **WakaTime integration**
+    
+    WakaTime integration plugin for tracking coding activity in opencode sessions.
+    
+    [View Repository](https://github.com/angristan/opencode-wakatime)
+  </Accordion>
+
+  <Accordion title="Google AI Search" icon="magnifying-glass">
+    **Query Google AI Mode (SGE)**
+    
+    An opencode plugin that exposes a native tool for querying Google AI Mode (SGE).
+    
+    [View Repository](https://github.com/IgorWarzocha/Opencode-Google-AI-Search-Plugin)
+  </Accordion>
+
+  <Accordion title="With Context MCP" icon="note">
+    **Project-specific markdown notes**
+    
+    MCP server for managing project-specific markdown notes with templates, batch edits, and ignore patterns.
+    
+    [View Repository](https://github.com/boxpositron/with-context-mcp)
+  </Accordion>
+</AccordionGroup>
+
+## Automation & CI/CD
+
+<AccordionGroup>
+  <Accordion title="Pilot" icon="robot">
+    **Automation daemon**
+    
+    Automation daemon that polls for work from GitHub issues and Linear tickets.
+    
+    [View Repository](https://github.com/athal7/opencode-pilot)
+  </Accordion>
+
+  <Accordion title="Ralph Wiggum" icon="arrows-rotate">
+    **Self-correcting agent loops**
+    
+    Iterative AI development loops with self-correcting agents based on the Ralph Wiggum technique.
+    
+    [View Repository](https://github.com/Th0rgal/opencode-ralph-wiggum)
+  </Accordion>
+</AccordionGroup>
+
+## Configuration & Customization
+
+<AccordionGroup>
+  <Accordion title="Opencode Synced" icon="sync">
+    **Sync configs across machines**
+    
+    Enables syncing global opencode configurations across machines with public/private visibility options.
+    
+    [View Repository](https://github.com/iHildy/opencode-synced)
+  </Accordion>
+
+  <Accordion title="Opencode Snippets" icon="code">
+    **Instant inline text expansion**
+    
+    Instant inline text expansion for OpenCode. Type #snippet anywhere in your message and watch it transform. Brings DRY principles to prompt engineering with composable, shell-enabled snippets.
+    
+    [View Repository](https://github.com/JosXa/opencode-snippets)
+  </Accordion>
+
+  <Accordion title="Opencode Ignore" icon="ban">
+    **Ignore files based on pattern**
+    
+    Plugin to ignore directory/file based on pattern.
+    
+    [View Repository](https://github.com/lgladysz/opencode-ignore)
+  </Accordion>
+
+  <Accordion title="Model Announcer" icon="microphone">
+    **Model self-awareness**
+    
+    Automatically injects the current model name into the chat context so the LLM is self-aware.
+    
+    [View Repository](https://github.com/ramarivera/opencode-model-announcer)
+  </Accordion>
+
+  <Accordion title="Optimal Model Temps" icon="temperature-half">
+    **Optimal sampling temperatures**
+    
+    Minimal plugin that nudges specific models to their preferred sampling temperature.
+    
+    [View Repository](https://github.com/Lyapsus/opencode-optimal-model-temps)
+  </Accordion>
+
+  <Accordion title="Shell Strategy" icon="terminal">
+    **Avoid interactive shell hangs**
+    
+    Instructions file that teaches LLMs how to avoid interactive shell commands that hang in non-TTY environments.
+    
+    [View Repository](https://github.com/JRedeker/opencode-shell-strategy)
+  </Accordion>
+
+  <Accordion title="UNMOJI" icon="face-smile">
+    **Strip emojis from output**
+    
+    A simple plugin that strips ALL emojis from agent outputs in Opencode.
+    
+    [View Repository](https://codeberg.org/bastiangx/opencode-unmoji)
+  </Accordion>
+</AccordionGroup>
+
+## Security & Safety
+
+<AccordionGroup>
+  <Accordion title="CC Safety Net" icon="life-ring">
+    **Safety net catching destructive commands**
+    
+    A Claude Code plugin that acts as a safety net, catching destructive git and filesystem commands before they execute.
+    
+    [View Repository](https://github.com/kenryu42/claude-code-safety-net)
+  </Accordion>
+
+  <Accordion title="Envsitter Guard" icon="shield-halved">
+    **Prevent .env leaks**
+    
+    OpenCode plugin that prevents agents/tools from reading or editing sensitive .env* files, while still allowing safe inspection via EnvSitter (keys + deterministic fingerprints; never values).
+    
+    [View Repository](https://github.com/boxpositron/envsitter-guard)
+  </Accordion>
+</AccordionGroup>
+
+## Developer Resources
+
+<AccordionGroup>
+  <Accordion title="Plugin Template" icon="template">
+    **CICD setup for plugins**
+    
+    Focuses on providing the CICD setup with generator script, release please, bun publish, npm trusted publishing, and mise tasks.
+    
+    [View Repository](https://github.com/zenobi-us/opencode-plugin-template)
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,421 @@
+---
+title: YAML Schema Reference
+description: Complete reference for all fields in Awesome OpenCode YAML entries
+---
+
+This page documents all available fields for YAML entries in the Awesome OpenCode list.
+
+## Required Fields
+
+All entries must include these four fields:
+
+<ParamField path="name" type="string" required>
+  Display name of the project or tool.
+  
+  - Use title case (e.g., "My Plugin Name")
+  - Be descriptive and specific
+  - Avoid marketing buzzwords
+  
+  **Example:**
+  ```yaml
+  name: Security Review Agent
+  ```
+</ParamField>
+
+<ParamField path="repo" type="string (URI)" required>
+  URL to the repository.
+  
+  - Must be a valid HTTPS URL
+  - Typically a GitHub repository
+  - Must be publicly accessible
+  
+  **Example:**
+  ```yaml
+  repo: https://github.com/example/opencode-security-agent
+  ```
+</ParamField>
+
+<ParamField path="tagline" type="string" required>
+  Short punchy summary shown in collapsed view.
+  
+  - Maximum 120 characters
+  - Clearly explain what the project does
+  - Avoid redundant category names
+  
+  **Example:**
+  ```yaml
+  tagline: AI agent specialized in security code review
+  ```
+</ParamField>
+
+<ParamField path="description" type="string" required>
+  Full description of the project shown when expanded.
+  
+  - Can be multiple lines
+  - Explain what it does and why it's useful
+  - Highlight key features and use cases
+  - Use proper markdown formatting
+  
+  **Example:**
+  ```yaml
+  description: A custom agent configuration for security-focused code review.
+    Includes
+    - Custom system prompts for security analysis
+    - Predefined tools for vulnerability scanning
+    - Skills for OWASP Top 10 detection
+  ```
+</ParamField>
+
+## Optional Fields
+
+<ParamField path="scope" type="array" default="[global]">
+  Installation scope indicating where the extension can be installed.
+  
+  - `global` - System-wide installation (`~/.config/opencode/`)
+  - `project` - Project-specific installation (`.opencode/`)
+  - Defaults to `[global]` if omitted
+  - Can specify both if applicable
+  - Must include at least one value if specified
+  
+  **Examples:**
+  ```yaml
+  # Plugin that works in both locations
+  scope:
+    - global
+    - project
+  ```
+  
+  ```yaml
+  # Theme that's typically global-only
+  scope:
+    - global
+  ```
+</ParamField>
+
+<ParamField path="tags" type="array of strings">
+  Tags for filtering and discoverability.
+  
+  - Use lowercase with hyphens for multi-word tags
+  - Be specific and relevant
+  - Include technology names if applicable
+  - Avoid overly generic tags
+  
+  **Example:**
+  ```yaml
+  tags:
+    - security
+    - code-review
+    - owasp
+    - agent
+  ```
+</ParamField>
+
+<ParamField path="min_version" type="string (semver)">
+  Minimum OpenCode version required.
+  
+  - Must follow semantic versioning format: `major.minor.patch`
+  - Pattern: `^[0-9]+\.[0-9]+\.[0-9]+`
+  
+  **Example:**
+  ```yaml
+  min_version: "1.0.0"
+  ```
+  
+  <Warning>
+  Always use quotes around version numbers to ensure YAML parses them as strings, not numbers.
+  </Warning>
+</ParamField>
+
+<ParamField path="homepage" type="string (URI)">
+  Documentation URL if different from the repository.
+  
+  - Must be a valid HTTPS URL
+  - Use for dedicated documentation sites
+  - Omit if docs are in the repository README
+  
+  **Example:**
+  ```yaml
+  homepage: https://example.com/docs/security-agent
+  ```
+</ParamField>
+
+<ParamField path="installation" type="string">
+  Detailed installation instructions in markdown format.
+  
+  Use the multiline string format (`|`) for readability.
+  
+  **Recommended sections:**
+  - Prerequisites
+  - Installation steps
+  - Configuration
+  - Files modified
+  - Removal/uninstallation
+  
+  **Example:**
+  ```yaml
+  installation: |
+    ## Prerequisites
+    - OpenCode 1.0.0 or later
+    - Node.js 18+
+    
+    ## Installation
+    
+    ### Global (all projects)
+    npm install -g @example/mcp-server
+    
+    ## Configuration
+    Add to your opencode.json configuration file.
+    
+    ## Files Modified
+    - ~/.config/opencode/opencode.json
+    
+    ## Removal
+    npm uninstall -g @example/mcp-server
+  ```
+</ParamField>
+
+## Complete Examples
+
+Here are complete examples for different categories:
+
+<CodeGroup>
+```yaml Plugin
+# data/plugins/example-plugin.yaml
+name: Example Plugin
+repo: https://github.com/example/opencode-example-plugin
+tagline: A brief description of what this plugin does (max 120 chars)
+description: A longer description explaining the plugin in detail.
+  - Can be multiple lines and include
+  - Feature highlights
+  - Use cases
+  - Key benefits
+
+scope:
+  - global
+  - project
+
+tags:
+  - productivity
+  - ai
+  - authentication
+
+min_version: "1.0.0"
+
+homepage: https://example.com/docs/opencode-plugin
+
+installation: |
+  ## Prerequisites
+  - OpenCode 1.0.0 or later
+  - Node.js 18+ (for local development)
+  
+  ## Installation
+  
+  ### Global (all projects)
+  git clone https://github.com/example/opencode-example-plugin ~/.config/opencode/plugin/example-plugin
+  
+  ### Project-only
+  git clone https://github.com/example/opencode-example-plugin .opencode/plugin/example-plugin
+  
+  ## Configuration
+  Add to your opencode.json configuration file.
+  
+  ## Removal
+  1. Remove the plugin directory
+  2. Remove the config entry from opencode.json
+```
+
+```yaml Agent
+# data/agents/security-reviewer.yaml
+name: Security Review Agent
+repo: https://github.com/example/opencode-security-agent
+tagline: AI agent specialized in security code review
+description: A custom agent configuration for security-focused code review.
+  Includes
+  - Custom system prompts for security analysis
+  - Predefined tools for vulnerability scanning
+  - Skills for OWASP Top 10 detection
+
+scope:
+  - global
+  - project
+
+tags:
+  - security
+  - code-review
+  - agent
+  - skill
+
+min_version: "1.0.0"
+
+homepage: https://example.com/docs/security-agent
+
+installation: |
+  ## Prerequisites
+  - OpenCode 1.0.0 or later
+  
+  ## Installation
+  
+  ### Global (all projects)
+  ```bash
+  mkdir -p ~/.config/opencode/agent/security-reviewer
+  curl -o ~/.config/opencode/agent/security-reviewer/agent.json \
+    https://raw.githubusercontent.com/example/opencode-security-agent/main/agent.json
+  ```
+  
+  ## Configuration
+  Add to your `opencode.json`:
+  ```json
+  {
+    "agents": {
+      "security-reviewer": {
+        "enabled": true
+      }
+    }
+  }
+  ```
+```
+
+```yaml Theme
+# data/themes/dark-ocean.yaml
+name: Dark Ocean Theme
+repo: https://github.com/example/opencode-dark-ocean
+tagline: A beautiful dark theme with vibrant blue accents
+description: A dark theme designed for extended coding sessions.
+  Features high contrast syntax highlighting and
+  carefully chosen colors to reduce eye strain.
+
+scope:
+  - global
+
+tags:
+  - dark
+  - high-contrast
+  - blue
+
+min_version: "1.0.0"
+
+installation: |
+  ## Installation
+  
+  curl -o ~/.config/opencode/themes/dark-ocean.json \
+    https://raw.githubusercontent.com/example/opencode-dark-ocean/main/theme.json
+  
+  ## Configuration
+  Add "theme": "dark-ocean" to your opencode.json
+```
+
+```yaml MCP Server (Resource)
+# data/resources/mcp-database.yaml
+name: Database MCP Server
+repo: https://github.com/example/opencode-mcp-database
+tagline: MCP server for database access and querying
+description: A Model Context Protocol (MCP) server that provides
+  OpenCode with database access capabilities.
+  
+  Supports
+  - PostgreSQL, MySQL, SQLite
+  - Read-only query execution
+  - Schema introspection
+
+scope:
+  - global
+  - project
+
+tags:
+  - mcp-server
+  - database
+  - postgresql
+  - mysql
+
+min_version: "1.0.0"
+
+homepage: https://example.com/docs/mcp-database
+
+installation: |
+  ## Prerequisites
+  - Node.js 18+
+  - Database connection credentials
+  
+  ## Installation
+  npm install -g @example/opencode-mcp-database
+  
+  ## Configuration
+  Add MCP server configuration to your opencode.json file.
+  
+  ## Security Notes
+  - Use read-only database credentials
+  - Consider connection pooling for production
+  - Review query permissions carefully
+```
+
+```yaml Standalone Project
+# data/projects/dashboard.yaml
+name: OpenCode Dashboard
+repo: https://github.com/example/opencode-dashboard
+tagline: Web-based dashboard for monitoring OpenCode sessions
+description: A standalone web application for monitoring and managing
+  OpenCode sessions across multiple projects.
+  
+  Features
+  - Real-time session monitoring
+  - Token usage analytics
+  - Multi-project overview
+
+tags:
+  - dashboard
+  - monitoring
+  - web-ui
+  - analytics
+
+min_version: "1.0.0"
+
+homepage: https://example.com/opencode-dashboard
+
+installation: |
+  ## Prerequisites
+  - Node.js 18+
+  - OpenCode 1.0.0 or later
+  
+  ## Installation
+  git clone https://github.com/example/opencode-dashboard
+  cd opencode-dashboard
+  npm install
+  npm start
+  
+  ## Configuration
+  Create a .env file with OPENCODE_LOG_DIR and PORT settings.
+  
+  ## Usage
+  Open http://localhost:3000 in your browser.
+```
+</CodeGroup>
+
+## Validation
+
+All entries are validated against this schema using the validation script:
+
+```bash
+node scripts/validate.js data/category/your-file.yaml
+```
+
+The validator checks:
+- YAML syntax is correct
+- All required fields are present
+- Field types match the schema
+- `tagline` is 120 characters or less
+- URLs are valid and properly formatted
+- `min_version` follows semver pattern if specified
+- `scope` contains valid values (`global` or `project`)
+
+<Warning>
+Validation runs automatically on all pull requests. Ensure your entry passes validation before submitting.
+</Warning>
+
+## Additional Notes
+
+- The schema allows `additionalProperties: true`, so you can include custom fields if needed
+- YAML files use the `.yaml` extension (not `.yml`)
+- File names should use kebab-case (e.g., `my-plugin.yaml`)
+- The README.md is auto-generated from YAML files - never edit it directly
+
+For questions about specific fields or validation errors, see the [contribution guidelines](/contribute/guidelines) or review existing entries in the repository.

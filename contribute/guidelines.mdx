@@ -1,0 +1,149 @@
+---
+title: Contribution Guidelines
+description: Requirements and quality standards for submitting entries to Awesome OpenCode
+---
+
+Thank you for contributing to Awesome OpenCode! This guide outlines the requirements and standards for high-quality submissions.
+
+## Entry Requirements
+
+All submissions must meet these requirements:
+
+- **Relevant** - Directly related to OpenCode (plugins, themes, agents, tools, guides, etc.)
+- **Public** - Repository must be publicly accessible
+- **Maintained** - Active commits within the last 6 months
+- **Unique** - Not a duplicate of an existing entry
+- **Complete** - All required fields included and validated
+
+<Warning>
+Entries that don't meet these requirements will be declined during review.
+</Warning>
+
+## Quality Standards
+
+### Clear Naming
+
+Your entry name should be:
+- Descriptive and specific
+- Title case (e.g., "Security Review Agent" not "security-review-agent")
+- Free of marketing buzzwords
+- Accurately reflect what the project does
+
+### Compelling Tagline
+
+The tagline is shown in collapsed view and must:
+- Be 120 characters or less
+- Clearly explain what your project does
+- Be concise and punchy
+- Avoid redundant words (don't repeat the category name)
+
+**Good examples:**
+- "AI agent specialized in security code review"
+- "Web-based dashboard for monitoring OpenCode sessions"
+- "MCP server for database access and querying"
+
+**Bad examples:**
+- "The best plugin ever made" (vague, marketing-heavy)
+- "A plugin" (not descriptive)
+- "Plugin for OpenCode that does many things" (too generic)
+
+### Comprehensive Description
+
+Your description should:
+- Explain what the project does in detail
+- Highlight key features and use cases
+- Explain why it's useful
+- Can be multiple lines
+- Use proper markdown formatting
+
+### Accurate Repository Link
+
+The `repo` field must:
+- Link to a public GitHub repository (or other git hosting)
+- Be the canonical source code location
+- Use HTTPS format (e.g., `https://github.com/owner/repo`)
+- Be a valid, accessible URL
+
+## What Makes a Good Submission
+
+### Complete Documentation
+
+Provide detailed installation instructions in the `installation` field:
+- Prerequisites clearly listed
+- Step-by-step installation commands
+- Configuration examples
+- Files that will be modified
+- Removal/uninstallation instructions
+
+See the [Schema Reference](/contribute/schema-reference) for all available fields.
+
+### Appropriate Category
+
+Place your YAML file in the correct category folder:
+
+- `data/plugins/` - OpenCode plugins and extensions (JS/TS modules)
+- `data/themes/` - Color schemes and visual themes
+- `data/agents/` - AI agents and skills for specialized tasks
+- `data/projects/` - Standalone tools, GUIs, integrations, and utilities
+- `data/resources/` - Guides, templates, configurations, and MCP servers
+
+<Warning>
+If you're unsure which category fits best, choose the one that represents the primary purpose. For example, an MCP server goes in `resources/`, not `projects/`.
+</Warning>
+
+### Proper Scope
+
+Use the `scope` field to indicate where your extension can be installed:
+
+- `global` - System-wide installation (`~/.config/opencode/`)
+- `project` - Project-specific installation (`.opencode/`)
+- Both - Can be installed in either location
+
+If omitted, defaults to `[global]`.
+
+### Helpful Tags
+
+Add relevant tags to improve discoverability:
+- Be specific (e.g., "postgresql", "security", "code-review")
+- Use lowercase with hyphens for multi-word tags
+- Include technology names if applicable
+- Avoid overly generic tags
+
+### Version Requirements
+
+If your project requires a specific OpenCode version, specify it:
+
+```yaml
+min_version: "1.0.0"
+```
+
+Use semantic versioning format (major.minor.patch).
+
+## Common Mistakes to Avoid
+
+1. **Editing README.md directly** - Never edit the README. It auto-generates from YAML files.
+2. **Missing required fields** - Validation will fail without `name`, `repo`, `tagline`, and `description`.
+3. **Tagline too long** - Must be 120 characters or less.
+4. **Invalid repository URL** - Must be a valid HTTPS URL to a git repository.
+5. **Poor file naming** - Use kebab-case (e.g., `my-plugin.yaml`, not `MyPlugin.yaml`).
+6. **Unmaintained projects** - Ensure your repository has recent activity.
+
+## Review Process
+
+After you submit a pull request:
+
+1. **Automated validation** - GitHub Actions runs schema validation on your YAML
+2. **Maintainer review** - A maintainer reviews content, relevance, and quality
+3. **Feedback or approval** - You may receive requests for changes
+4. **Merge** - Once approved, your entry is merged
+5. **README update** - The README.md automatically regenerates to include your entry
+
+You don't need to update README.md manually - it's generated from the YAML files.
+
+## Need Help?
+
+If you're unsure about any requirements:
+- Review the [example files](https://github.com/awesome-opencode/awesome-opencode/tree/main/data/examples)
+- Check the [Schema Reference](/contribute/schema-reference) for field details
+- Look at existing entries in the category you're targeting
+- Open an issue to ask questions before submitting

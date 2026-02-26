@@ -1,0 +1,234 @@
+---
+title: How to Browse Awesome OpenCode
+description: Navigate the directory efficiently and discover the perfect resources for your OpenCode workflow
+---
+
+## Understanding the Structure
+
+Awesome OpenCode is organized into **six main categories**, each serving a distinct purpose in the ecosystem. Understanding these categories will help you quickly find what you need.
+
+### Category Overview
+
+<AccordionGroup>
+  <Accordion title="Official Repositories" icon="star">
+    The foundation of the OpenCode ecosystem — core tools and SDKs maintained directly by Anomaly.
+    
+    **What you'll find:**
+    - The main OpenCode CLI agent
+    - Official JavaScript/TypeScript SDK
+    - Official Go SDK
+    - Official Python SDK
+    
+    **When to use:** You're setting up OpenCode for the first time or need official documentation.
+  </Accordion>
+
+  <Accordion title="Plugins" icon="puzzle-piece">
+    The largest category with 70+ community-created extensions that add functionality to OpenCode.
+    
+    **Common plugin types:**
+    - **Memory Systems** - Agent Memory, Opencode Mem, Simple Memory
+    - **Authentication** - Antigravity Auth, Gemini Auth, OpenAI Codex Auth
+    - **Workflows** - Micode, Background Agents, Froggy
+    - **Development Tools** - Devcontainers, Direnv, Opencode Worktree
+    - **Monitoring** - Context Analysis, Tokenscope, WakaTime
+    - **Notifications** - Opencode Notify, Smart Voice Notify, Warcraft Notifications
+    - **Utilities** - Smart Title, Model Announcer, Opencode Ignore
+    
+    **When to use:** You want to extend OpenCode's capabilities or solve a specific workflow challenge.
+  </Accordion>
+
+  <Accordion title="Themes" icon="palette">
+    Visual customizations for your OpenCode terminal interface.
+    
+    **Available themes:**
+    - Ayu Dark - Popular color scheme with golden yellow accent
+    - Poimandres Theme - Modern aesthetic
+    
+    **When to use:** You want to personalize your terminal appearance.
+  </Accordion>
+
+  <Accordion title="Agents" icon="robot">
+    Specialized AI agents and configurations for structured development workflows.
+    
+    **What you'll find:**
+    - Modular agent systems (Agentic)
+    - Production-ready subagents (Claude Subagents)
+    - Enhanced workflow configurations (Opencode Agents)
+    - Domain-specific agents (Redstone for Minecraft)
+    
+    **When to use:** You need specialized AI behavior or multi-agent orchestration.
+  </Accordion>
+
+  <Accordion title="Projects" icon="hammer">
+    Standalone tools, GUIs, integrations, and utilities built around OpenCode.
+    
+    **Project categories:**
+    - **GUIs & TUIs** - OpenChamber, Agent of Empires, OpenWork
+    - **API Proxies** - CLI Proxy API, Codex Proxy Server, Gemini CLI to API
+    - **Management Tools** - OC Manager, OCX, Opencode Session Manager
+    - **Integrations** - Kimaki (Discord bot), Opencode DDEV, Opencode Neovim
+    - **Voice & Accessibility** - Handy, MCP Voice Interface
+    - **Orchestration** - Vibe Kanban, Open Agent, Open Dispatch
+    
+    **When to use:** You need a complete tool or want a different interface for OpenCode.
+  </Accordion>
+
+  <Accordion title="Resources" icon="book">
+    Guides, templates, configurations, and learning materials.
+    
+    **What you'll find:**
+    - Troubleshooting guides (Debug Log to Text File)
+    - Configuration starters (Opencode Config Starter)
+    - Utility tools (GoTTY for web access)
+    
+    **When to use:** You're learning, troubleshooting, or setting up a new configuration.
+  </Accordion>
+</AccordionGroup>
+
+## Finding What You Need
+
+### By Use Case
+
+<CardGroup cols={2}>
+  <Card title="I want persistent memory" icon="brain">
+    **Plugins:** Agent Memory, Opencode Mem, Simple Memory
+    
+    Choose based on complexity:
+    - Simple Memory → Git-based, team-reviewable
+    - Agent Memory → Letta-inspired, self-editable blocks
+    - Opencode Mem → Vector database, web interface
+  </Card>
+  
+  <Card title="I want free AI models" icon="coins">
+    **Plugins:** Antigravity Auth, Antigravity Multi-Auth, Gemini Auth, OpenAI Codex Auth
+    
+    Choose based on provider:
+    - Antigravity → Google/Anthropic via IDE auth
+    - Gemini → Existing Gemini plan
+    - OpenAI Codex → ChatGPT Plus/Pro
+  </Card>
+  
+  <Card title="I want background agents" icon="gears">
+    **Plugins:** Background Agents, Oh My Opencode, Pocket Universe
+    
+    Choose based on approach:
+    - Background Agents → Claude Code-style async
+    - Oh My Opencode → Comprehensive toolset
+    - Pocket Universe → Closed-loop coordination
+  </Card>
+  
+  <Card title="I want a GUI" icon="window">
+    **Projects:** OpenChamber, OpenWork, Agent of Empires, Opencode Web
+    
+    Choose based on features:
+    - OpenChamber → VS Code extension, web/desktop
+    - OpenWork → Claude Cowork alternative
+    - Agent of Empires → Multi-session tmux TUI
+  </Card>
+</CardGroup>
+
+### By Workflow Stage
+
+<Steps>
+  <Step title="Planning">
+    - **Micode** - Brainstorm-Plan-Implement workflow
+    - **Opencode Roadmap** - Strategic planning
+    - **Plannotator** - Interactive plan review UI
+    - **OpenSpec** - Architecture specification
+  </Step>
+  
+  <Step title="Development">
+    - **Opencode Worktree** - Git worktree isolation
+    - **Devcontainers** - Multi-branch environments
+    - **Oh My Opencode** - LSP/AST/MCP tools
+    - **Morph Fast Apply** - 10,500+ tokens/sec editing
+  </Step>
+  
+  <Step title="Monitoring">
+    - **Context Analysis** - Token usage analysis
+    - **Opencode Quota** - Quota tracking
+    - **Tokenscope** - Cost tracking
+    - **WakaTime** - Activity tracking
+  </Step>
+  
+  <Step title="Collaboration">
+    - **Opencode Synced** - Sync configs across machines
+    - **Simple Memory** - Git-based team memory
+    - **Kimaki** - Discord bot controller
+    - **Open Dispatch** - Slack/Teams integration
+  </Step>
+</Steps>
+
+## Entry Format
+
+Each entry in the directory follows a consistent format:
+
+```markdown
+**Entry Name** - Badge - Short tagline
+
+Longer description explaining features and use cases.
+
+🔗 View Repository
+```
+
+<Tip>
+**Pro tip:** Use your browser's find function (Ctrl+F or Cmd+F) to search for specific keywords like "memory", "notification", or "git" across the entire directory.
+</Tip>
+
+## Evaluating Entries
+
+When choosing between similar tools, consider:
+
+<AccordionGroup>
+  <Accordion title="Stars" icon="star">
+    GitHub stars indicate popularity and community trust. Higher stars generally mean:
+    - More users testing and validating the tool
+    - Active community discussions
+    - Better documentation from user contributions
+  </Accordion>
+  
+  <Accordion title="Maintenance" icon="wrench">
+    Check the repository's recent commits:
+    - Active within 6 months = Well maintained
+    - Older commits = May still work but consider alternatives
+  </Accordion>
+  
+  <Accordion title="Scope" icon="bullseye">
+    Match the tool's complexity to your needs:
+    - **Simple plugins** - Single-purpose, easy setup
+    - **Frameworks** - Comprehensive but require configuration
+    - **Standalone tools** - Complete solutions, may duplicate functionality
+  </Accordion>
+  
+  <Accordion title="Dependencies" icon="link">
+    Consider what else you'll need:
+    - **Pure OpenCode** - Just install and go
+    - **External services** - May require API keys or accounts
+    - **System requirements** - Docker, tmux, specific OS, etc.
+  </Accordion>
+</AccordionGroup>
+
+## Getting Help
+
+<CardGroup cols={2}>
+  <Card title="Repository Issues" icon="github">
+    Each entry links to its GitHub repository. Check the Issues tab for:
+    - Known bugs
+    - Installation help
+    - Feature requests
+    - Community discussion
+  </Card>
+  
+  <Card title="OpenCode Community" icon="discord">
+    Join the OpenCode Discord for:
+    - Plugin recommendations
+    - Configuration help
+    - Sharing your own creations
+    
+    [Join Discord →](https://discord.gg/opencode)
+  </Card>
+</CardGroup>
+
+<Note>
+**Can't find what you're looking for?** The community is constantly creating new tools. Check back regularly or consider building your own and [contributing it](/about#contributing)!
+</Note>
